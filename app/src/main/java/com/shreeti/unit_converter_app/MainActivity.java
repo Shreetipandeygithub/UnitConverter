@@ -47,22 +47,22 @@ public class MainActivity extends AppCompatActivity {
                 double value_cm_to_m=edtNum/100f;
                 double value_km_to_m=edtNum*1000;
 
-                if (unitPresent.equals("g") || unitConverted.equals("kg")) {
+                if (unitPresent.equals("g") && unitConverted.equals("kg")) {
                     txtResult.setText(value_g_to_kg+"");
-                }else if(unitPresent.equals("kg") || unitConverted.equals( "g")) {
+                }else if(unitPresent.equals("kg") && unitConverted.equals( "g")) {
                     txtResult.setText(value_kg_to_g+"");
-                }else if(unitPresent.equals("l") || unitConverted.equals("ml")) {
+                }else if(unitPresent.equals("l") && unitConverted.equals("ml")) {
                     txtResult.setText(value_l_to_ml+"");
-                }else if(unitPresent.equals("ml") || unitConverted.equals("l")) {
+                }else if(unitPresent.equals("ml") && unitConverted.equals("l")) {
                     txtResult.setText(value_ml_to_l+"");
-                }else if(unitPresent.equals("km") || unitConverted.equals("m")) {
+                }else if(unitPresent.equals("km") && unitConverted.equals("m")) {
                     txtResult.setText(value_km_to_m + "");
-                }else if(unitPresent.equals("m") || unitConverted.equals("km")) {
+                }else if(unitPresent.equals("m") && unitConverted.equals("km")) {
                         txtResult.setText(value_m_to_km + "");
-                }else if(unitPresent.equals("m") || unitConverted.equals("cm")) {
+                }else if(unitPresent.equals("m") && unitConverted.equals("cm")) {
                     txtResult.setText(value_m_to_cm+"");
-                }else if(unitPresent.equals("cm") || unitConverted.equals("m")) {
-                    txtResult.setText(value_cm_to_m + "");
+                }else if(unitPresent.equals("cm") && unitConverted.equals("m")) {
+                    txtResult.setText(value_cm_to_m +"");
                 }else{
                     Toast.makeText(MainActivity.this, "Enter correct Unit in small letters", Toast.LENGTH_SHORT).show();
                 }
